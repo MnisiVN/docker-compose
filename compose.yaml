@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  docker-compose-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "32768:8080"
+    depends_on:
+      - mysql
+    image: docker-compose:latest
+    container_name: docker-compose-container
+    volumes:
+      - ./target/docker-compose-0.0.1-SNAPSHOT.jar:/app/docker-compose.jar
+    command: ["java", "-jar", "docker-compose.jar"]
+ 
+  mysql:
+    image: mysql:8.0.19
+    container_name: mysql-container
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password1
+      MYSQL_DATABASE: employee_db
