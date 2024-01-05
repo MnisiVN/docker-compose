@@ -1,6 +1,6 @@
 # EmployeeRestAPI
+I have introduced Dockerfile and Docker Compose to demonstrate my abilities of Docker Compose
 This is a CRUD Rest API developed using spring boot with lombok. Employee table was used to demonstrate the CRUD operations of the Rest API.
-Please note that in order to successfully run this code you will need to create the database schema in MySQL. 
 For more info please see application.properties under resources folder.
 I have also added the Unit testing for the Rest API to demonstrate my knowledge of it.
 The unit tests are done for the controller as well as the service layer to ensure high coverage.
